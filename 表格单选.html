@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <style>
+	table{border-collapse:collapse;border:1px solid #000;}
+	th{border-bottom:1px solid #000;}
+	th,td{width:70px;text-align:center;}
+	.even{background-color:#fff38f;}
+	.odd{background-color:#ffffee;}
+	.sel{background-color:red;}
+    </style>
+<script src="jq/jquery-1.12.3.min.js"></script>
+<script>
+$(function(){
+$('tbody tr:even').addClass('even')
+$('tbody tr:odd').addClass('odd')
+$('tbody tr').click(function(){
+$(this).addClass('sel').siblings('tr').removeClass('sel').end()
+.find(':radio').attr('checked',true);
+
+})
+$('table :radio:checked').parents('tr').addClass('sel');
+})
+</script>
+</head>
+<body>
+<table>
+<thead>
+<tr><th></th><th>姓名</th><th>性别</th><th>暂住址</th></tr>
+</thead>
+<tbody>
+	<tr><td><input type="radio"name="rad" checked="checked"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="radio"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="radio"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="radio"name="rad"></td><td>张三</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="radio"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="radio"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+</tbody>
+
+
+</table>
+</body>
+</html>

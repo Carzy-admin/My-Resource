@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body,ul{margin:0;padding:0;}
+      body{font-size:12px;line-height:2;}
+      ul{list-style:none;}
+	  .nav li{float:left;}
+	  .nav a{float:left;padding:5px 10px;font-weight:bold;}
+	  .nav{border-bottom:3px solid #0066CB;overflow:hidden;}
+	  a{text-decoration:none;color:#000;}
+	  a:hover{text-decoration:underline;}
+	  .navbar{display:none;list-style:disc inside;}
+	  .active a{background-color:#0066CB;color:#fff;}
+	  .show{display:block}
+	  .wrapper{width:300px;margin:0 auto;}
+    </style>
+<script src="jq/jquery-1.12.3.min.js"></script>
+  <script>
+	$(function(){
+	$('.nav li').first().addClass('active')
+	$('.nav li').mouseover(function(){
+	$(this).addClass('active').siblings().removeClass('active')
+	var sum=$(this).index();
+	$('.navbar').eq(sum).stop(true,true).slideDown().siblings('.navbar').hide()
+	})
+	})
+  </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="nav">
+        <li><a href="#">热点新闻</a></li>
+        <li><a href="#">互联网新闻</a></li>
+        <li><a href="#">财经新闻</a></li>
+      </ul>
+	  
+	  
+	  
+	  
+	  
+      <ul class="navbar show">
+        <li><a href="#">解放军仪仗队亮相红场阅兵</a></li>
+        <li><a href="#">李克强要求银行降收费：能降尽可能降</a></li>
+        <li><a href="#">工信部落实总理要求&nbsp;年内超半数用户网速达8M以上</a></li>
+        <li><a href="#">中国政府医疗队尼布尔归来&nbsp;13天求治伤员641人</a></li>
+        <li><a href="#">郑州幼儿园被曝孩子跪着吃饭&nbsp;已被责令关停</a></li>
+        <li><a href="#">教育部：取消高校行政级别&nbsp;保障学术相对独立</a></li>
+        <li><a href="#">4月全国CPI同比上涨1.5%&nbsp;连续3个月处于”1时代“</a></li>
+      </ul>
+	  
+	  
+	  
+      <ul class="navbar">
+        <li><a href="#">解放军仪仗队亮相红场阅兵222</a></li>
+        <li><a href="#">李克强要求银行降收费：能降尽可能降</a></li>
+        <li><a href="#">工信部落实总理要求&nbsp;年内超半数用户网速达8M以上</a></li>
+        <li><a href="#">中国政府医疗队尼布尔归来&nbsp;13天求治伤员641人</a></li>
+        <li><a href="#">郑州幼儿园被曝孩子跪着吃饭&nbsp;已被责令关停</a></li>
+        <li><a href="#">教育部：取消高校行政级别&nbsp;保障学术相对独立</a></li>
+        <li><a href="#">4月全国CPI同比上涨1.5%&nbsp;连续3个月处于”1时代“</a></li>
+      </ul>
+	  
+	  
+	  
+      <ul class="navbar">
+        <li><a href="#">解放军仪仗队亮相红场阅兵333</a></li>
+        <li><a href="#">李克强要求银行降收费：能降尽可能降</a></li>
+        <li><a href="#">工信部落实总理要求&nbsp;年内超半数用户网速达8M以上</a></li>
+        <li><a href="#">中国政府医疗队尼布尔归来&nbsp;13天求治伤员641人</a></li>
+        <li><a href="#">郑州幼儿园被曝孩子跪着吃饭&nbsp;已被责令关停</a></li>
+        <li><a href="#">教育部：取消高校行政级别&nbsp;保障学术相对独立</a></li>
+        <li><a href="#">4月全国CPI同比上涨1.5%&nbsp;连续3个月处于”1时代“</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

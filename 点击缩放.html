@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script src="jq/jquery-1.12.3.min.js"></script>
+<script>
+$(function(){
+$('dl:not(":first") dd').hide();
+$("dt").click(function(){
+$dds=$(this).siblings('dd');
+if($dds.is(':visible')){
+ $dds.slideUp();
+ $(this).find('img').attr('src','images/menuj.png')
+}
+else{
+ $dds.slideDown();
+ $(this).find('img').attr('src','images/menu-ex.png')
+}
+})
+})
+</script>
+<style>
+dl,dd{margin:0;padding:0;}
+dl{margin:0 auto;width:148px; margin-bottom:5px;}
+dt{background:url(images/menubg.gif) no-repeat;width:152px;text-align:center;}
+dd{background-color:#fff;padding-left:30px;background:url(images/arr4.gif) no-repeat 10px;}
+div{background-color:#99d575;width:160px;padding:10px 0;}
+dl a{text-decoration:none;}
+</style>
+</head>
+<body>
+<div>
+    <dl>
+        <dt><a href="#">日记管理</a><img src="images/menuj.png" /></dt>
+        <dd><a href="#">日记管理</a></dd>
+        <dd><a href="#">添加日记</a></dd>
+        <dd><a href="#">我的日记</a></dd>
+        <dd><a href="#">他人日记</a></dd>
+    </dl>
+    <dl>
+        <dt><a href="#">消息管理</a><img src="images/menu-ex.png" /></dt>
+        <dd><a href="#">发送消息</a></dd>
+        <dd><a href="#">发送列表</a></dd>
+        <dd><a href="#">接受列表</a></dd>
+    </dl>
+    <dl>
+        <dt><a href="#">模块管理</a><img src="images/menu-ex.png" /></dt>
+        <dd><a href="#">所有模块</a></dd>
+        <dd><a href="#">添加父类</a></dd>
+        <dd><a href="#">添加子类</a></dd>
+    </dl>
+</div>
+</body>
+</html>

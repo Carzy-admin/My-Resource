@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <style>
+	table{border-collapse:collapse;border:1px solid #000;}
+	th{border-bottom:1px solid #000;}
+	th,td{width:70px;text-align:center;}
+	.even{background-color:#fff38f;}
+	.odd{background-color:#ffffee;}
+	.sel{background-color:red;}
+    </style>
+<script src="jq/jquery-1.12.3.min.js"></script>
+<script>
+$(function(){
+$('tbody tr:even').addClass('even')
+$('tbody tr:odd').addClass('odd')
+$('tbody tr').click(function(){
+var hasSelected=$(this).hasClass('sel');
+$(this)[hasSelected?'removeClass':'addClass']('sel')
+.find(':checkbox').attr('checked',!hasSelected);
+})/*
+$('tbody tr').click(function(){
+if($(this).hasClass('sel')){
+$(this).removeClass('sel').find(':checkbox').attr('checked',false);
+}else{
+$(this).addClass('sel').find(':checkbox').attr('checked',true);
+}
+})*/
+})
+</script>
+</head>
+<body>
+<table>
+<thead>
+<tr><th></th><th>姓名</th><th>性别</th><th>暂住址</th></tr>
+</thead>
+<tbody>
+	<tr><td><input type="checkbox"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="checkbox"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="checkbox"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="checkbox"name="rad"></td><td>张三</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="checkbox"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+	<tr><td><input type="checkbox"name="rad"></td><td>1</td><td>男</td><td>浙江宁波</td></tr>
+</tbody>
+
+
+</table>
+</body>
+</html>

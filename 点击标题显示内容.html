@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <style>
+#panel{width:200px;}
+    </style>
+<script src="jq/jquery-1.12.3.min.js"></script>
+<script>
+	$(function(){
+	/*$('#panel h3.head').bind('click',function(){
+	var $content=$(this).next();
+	if($content.is(':visible')){
+	$content.hide()
+	}else{
+	$content.show();
+	}
+	})
+	$('#panel h3.head').mouseover(function(){
+	$(this).next().show();
+	}).mouseout(function(){
+	$(this).next().hide();
+	})
+	$('#panel h3.head').hover(function(){
+	$(this).next().stop().fadeOut(1000);
+	},function(){
+	$(this).next().stop().fadeIn(1000);
+	})*/
+	$('#panel h3.head').hover(function(){
+	$(this).next().stop().slideUp(1000);
+	},function(){
+	$(this).next().stop().slideDown(1000);
+	})
+	})
+	
+</script>
+</head>
+<body>
+<div id="panel">
+<h3 class="head">什么是JQ？</h3>
+<div class="content">
+JQuery是鼠标经过添加大图,并将大图定位（以鼠标指针位置为基准）
+鼠标经过添加大图,并将大图定位（以鼠标指针位置为基准）
+鼠标经过添加大图,并将大图定位（以鼠标指针位置为基准）
+鼠标经过添加大图,并将大图定位（以鼠标指针位置为基准）
+鼠标经过添加大图,并将大图定位（以鼠标指针位置为基准）
+鼠标经过添加大图,并将大图定位（以鼠标指针位置为基准）
+鼠标经过添加大图,并将大图定位（以鼠标指针位置为基准）
+</div>
+</div>
+</body>
+</html>

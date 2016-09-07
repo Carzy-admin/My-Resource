@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <style>
+      ul{ margin:0; padding:0;}
+      li{ float:left; list-style:none; margin:10px}
+      img{ border:0}
+      #cdc{background-color:#000;}
+      p{ margin:0; height:30px; line-height:30px;  color:#fff;}
+    </style>
+<script src="jq/jquery-1.12.3.min.js"></script>
+<script>
+	$(function(){
+	$('li').mouseover(function(){
+	srcs=$(this).find('img').attr('bigger');
+	titles=$(this).find('img').attr('title');
+	$(this).find('img').attr('title',"");
+	$('body').append("<div id='cdc'><img src='"+srcs+"'><p>"+titles+"</p></div>");
+	$('#cdc').css({position:'absolute',left:e.pageX+10,top:e.pageY+10});
+	}).mouseout(function(){
+	$('#cdc').remove();
+	$(this).find('img').attr('title',titles);
+	}).mousemove(function(e){
+	$('#cdc').css({position:'absolute',left:e.pageX+10,top:e.pageY+10})
+	})
+	})
+</script>
+</head>
+<body>
+    <ul>
+      <li><a href="#"><img src="images/apple_1.jpg" bigger="images/apple_1_bigger.jpg" title="苹果苹果111" /></a></li>
+      <li><a href="#"><img src="images/apple_2.jpg" bigger="images/apple_2_bigger.jpg" title="苹果苹果222" /></a></li>
+      <li><a href="#"><img src="images/apple_3.jpg" bigger="images/apple_3_bigger.jpg" title="苹果苹果333" /></a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script src="jq/jquery-1.12.3.min.js"></script>
+<script>
+$(function(){
+$ullist=$("ul li:gt(5):not(:last)");
+$ullist.hide();
+$(".btn").click(function(){
+if($ullist.is(':visible')){
+	$ullist.hide();
+	$(this).text('精简显示品牌')
+	.css('background-image','url(images/down.gif)')
+	$('ul a').removeClass('color')
+}
+else{
+	$ullist.show();
+	$(this)
+	.text('全部显示品牌')
+	.css('background-image','url(images/up.gif)')
+	$('ul a').filter(":contains('佳能'),:contains('松下'),:contains('富士'),:contains('理光')").addClass("color");
+}
+return false;
+})
+})
+
+</script>
+<style>
+ul{margin:0;padding:0;}
+.clearfix:after{content:"\200B";clear:both;height:0;display:block;}
+.box{border:1px solid #ccc;width:600px;}
+.box li{width:200px;float:left;text-align:center;list-style:none}
+.showmore{text-align:center; margin-top:10px;}
+.showmore a{border:1px solid #ccc;}
+.btn{background:url(images/down.gif) no-repeat 30px;display:block;width:200px; margin:0 auto;}
+.color{color:red;}
+</style>
+</head>
+<body>
+<div class="box">
+<ul class="clearfix">
+<li><a href="#">佳能</a><i>(30440)</i></li>
+<li><a href="#">索尼</a><i>(30440)</i></li>
+<li><a href="#">三星</a><i>(30440)</i></li>
+<li><a href="#">尼康</a><i>(30440)</i></li>
+<li><a href="#">松下</a><i>(30440)</i></li>
+<li><a href="#">卡西欧</a><i>(30440)</i></li>
+<li><a href="#">富士</a><i>(30440)</i></li>
+<li><a href="#">可达</a><i>(30440)</i></li>
+<li><a href="#">宾得</a><i>(30440)</i></li>
+<li><a href="#">理光</a><i>(30440)</i></li>
+<li><a href="#">奥林巴斯</a><i>(30440)</i></li>
+<li><a href="#">明基</a><i>(30440)</i></li>
+<li><a href="#">爱国者</a><i>(30440)</i></li>
+<li><a href="#">其他品牌相机</a><i>(30440)</i></li>
+</ul>
+<div class="showmore">
+<a href="#" class="btn">显示全部品牌</a>
+</div>
+</div>
+</body>
+</html>
